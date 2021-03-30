@@ -1,0 +1,19 @@
+{
+  "name": "nodetutorial",
+  "version": "1.0.0",
+  "description": "node tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santosh67102/NodeTutorial.git"
+  },
+  "author": "santosh gautam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santosh67102/NodeTutorial/issues"
+  },
+  "homepage": "https://github.com/santosh67102/NodeTutorial#readme"
+}
