@@ -1,19 +1,19 @@
-const http = require('http');
-
 const express = require('express');
+
+const adminRoutes = require('./routes/admin');
+const shopRoutes = require('./routes/shop');
+
+const bodyparser = require('body-parser');
+
 const app = express();
 
-app.use((req,res,next)=>{
-    console.log("1 middle ware");
-    next();
+app.use(bodyparser.urlencoded({extended:false}));
+
+app.use(adminRoutes);
+app.use(shopRoutes);
+
+app.use((req,res)=>{
+res.status(404).send('<h1>404 Error: Page Not Found.</h1>');
 });
 
-app.use((req,res,next)=>{
-    const url = req.url;
-    console.log("2 middle ware");
-    console.log(url);
-    next();
-});
-const server =http.createServer(app);
-
-server.listen(5000, () => console.log('5000 server Running.....'));
+app.listen(5000);
